@@ -34,18 +34,18 @@ componentDidUpdate=(prevProps, prevState) =>{
       // pass the store into the provider
       
         <div className='section'>
-           <h1 className='content'>
+           <h4 className='content'>
            {this.props.content.map(ele=>{
-              return <div key={ele.subject}><span onClick={e=>this.view(e, ele)}>{ele.subject}</span>
+              return <ul key={ele.subject}><span onClick={e=>this.view(e, ele)} style={{cursor: 'pointer', }}>{ele.subject}</span>
               <span style={{fontSize: '14px'}}> {(ele.flag? '...flagged!' : '')}</span>
               <span style={{float: 'right'}}>
-              {this.props.activeFolder!=='deleted'&&<button key={ele.id} onClick={(e)=>this.delete(e,ele)}>delete {ele.subject}</button>}
-              {!ele.flag&&<button onClick={(e)=>this.flag(e,ele)}>flag! {ele.subject}</button>}
+              {this.props.activeFolder!=='deleted'&&<button key={ele.id} onClick={(e)=>this.delete(e,ele)}>Delete</button>}
+              {!ele.flag&&<button onClick={(e)=>this.flag(e,ele)}>Flag!</button>}
               </span>
-              </div>
+              </ul>
            })}
            
-           </h1>
+           </h4>
            <p className='mailbody'>
 {this.state.mailbody}</p>
         </div>

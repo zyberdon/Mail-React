@@ -67,12 +67,12 @@ flag=(ele)=>{
       
         <div>
            <Row className='navbar'><Col md={1} >Outlook</Col><Col md={11}></Col></Row>
-              <Row className='container'><Col md={2} className='sidebar' style={{'width': '10%'}}>
+              <Row><Col md={2} className='sidebar' style={{'width': '10%'}}>
               {
     Object.keys(this.state.mail).map(ele=>{
       let unread=this.calcUnread(ele)
       
-        return<p key={ele} className='sidebarcontent' onClick={(event)=> this.changefolders(event,ele)}>{ele + unread}</p>
+        return<p key={ele} className='sidebarcontent' onClick={(event)=> this.changefolders(event,ele)}>{ele +'   ' +unread}</p>
     })
               }
           </Col>
