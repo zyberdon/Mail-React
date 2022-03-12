@@ -75,9 +75,3 @@ body {
   background-color: bisque;
   color: rgba(0, 0, 0, 0.57);
 }
-.container {
-  display: inline-block;
-}
-.section {
-  display: inline-block;
-}
