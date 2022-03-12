@@ -64,8 +64,20 @@ body {
   font-size: 20px;
 }
 .sidebar {
+  display: block;
   background-color: #434343;
 }
 .sidebarcontent {
   color: black;
+}
+
+.content {
+  background-color: bisque;
+  color: rgba(0, 0, 0, 0.57);
+}
+.container {
+  display: inline-block;
+}
+.section {
+  display: inline-block;
 }
